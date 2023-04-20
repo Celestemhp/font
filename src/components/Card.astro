@@ -1,0 +1,43 @@
+---
+import "./public/styles/style.css";
+
+const header = Astro.props.header;
+const text = Astro.props.text;
+const imgPath = Astro.props.imgPath;
+const font = Astro.props.font;
+const undertext = Astro.props.undertext;
+
+---
+
+<article>
+    <div class="container1">
+        <div>
+            <img src={font} alt="" width="70%" />
+            <h1> {header} </h1>
+            <p>
+                {text}
+            </p>
+        </div>
+    <slot/>
+    </div>
+    <figure>
+        <img src={imgPath} alt="" />
+    </figure>
+</article>
+
+<style>
+    article {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid purple;
+    }
+    .container1 {
+        display: flex;
+        flex-direction: column;
+    }
+    article figure img {
+        width: 100%;
+    }
+</style>

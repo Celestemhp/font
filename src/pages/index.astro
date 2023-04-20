@@ -1,6 +1,8 @@
 ---
----
+import Card from "../components/Card.astro";
+import "./public/styles/style.css";
 
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -10,6 +12,64 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-	</body>
+		<div class="content">
+		<img class="img_overskrift" src="public/tyk.png" alt="Overskrift">
+		<main>
+			<Card font="public/tyk.png" 
+			header="Om Chicago" 
+			text="af Celeste" 
+			imgPath="public/plakat_font.png" 			>
+			<p>Denne font jeg har udviklet har jeg kaldt Chicago, og er inspireret af minimalisme, arkitektur samt geometri. Den består udelukkende af store bogstaver da det er ideen med fonten.
+				Den består af fine-lines men også af blokke. Jeg har brugt grid til at forme bogstaverne. Undervejs har jeg bl.a. skulle tage stilling til om der skulle seriffer på eller ej, samt letter-spacing.
+			</p>
+			</Card>
+			<Card font="/public/moodboard.svg" 
+			header="Moodboard"  
+			imgPath="public/moodboard_font.png" 			>
+			<p>Denne font jeg har udviklet har jeg kaldt Chicago, og er inspireret af minimalisme, arkitektur samt geometri. Den består udelukkende af store bogstaver da det er ideen med fonten.
+				Den består af fine-lines men også af blokke. Jeg har brugt grid til at forme bogstaverne. Undervejs har jeg bl.a. skulle tage stilling til om der skulle seriffer på eller ej, samt letter-spacing.
+			</p>
+			</Card>
+			<Card font="public/process_chicargo.svg" 
+			header="Process" 
+			imgPath="public/process_font.png" 			>
+			<p>Undervejs har jeg udviklet to slags fonte, som egentlig er meget forskellige da den ene er meget brutal og hvor der kun gøres brug af store bogstaver, hvorimod den anden skrift er blød og kun med små bogstaver. Jeg valgte at arbejde videre med den sidste da den anden ikke fungerede så godt når den blev sat sammen med tekst og var lidt for fin i udtrykket.		</p>
+			</Card>
+			<Card font="public/typografi_font.png" 
+			header="Typografi" 
+			imgPath="public/tyk_tynd.png" 			>
+			<p>Jeg har lavet to varianter, den ene er i ´light´ og den anden i ´normal´ som vil svare til Bold.	</p>
+			</Card>
+		</main>
+		</div>
+		<p>@Celeste</p>
+    </body>
 </html>
+
+<style>
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		background-color: white;
+
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 800px;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.img_overskrift {
+		width: 70%;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+</style>
