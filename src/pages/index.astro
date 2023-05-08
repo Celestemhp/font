@@ -1,6 +1,5 @@
 ---
 import Card from "../components/Card.astro";
-import "./public/styles/style.css";
 
 ---
 <html lang="en">
@@ -30,7 +29,7 @@ import "./public/styles/style.css";
 				Den består af fine-lines men også af blokke. Jeg har brugt grid til at forme bogstaverne. Undervejs har jeg bl.a. skulle tage stilling til om der skulle seriffer på eller ej, samt letter-spacing.
 			</p>
 			</Card>
-			<Card font="public/process_chicargo.svg" 
+			<Card class="process" font="public/process_chicargo.svg" 
 			header="Process" 
 			imgPath="public/process_font.png" 			>
 			<p>Undervejs har jeg udviklet to slags fonte, som egentlig er meget forskellige da den ene er meget brutal og hvor der kun gøres brug af store bogstaver, hvorimod den anden skrift er blød og kun med små bogstaver. Jeg valgte at arbejde videre med den sidste da den anden ikke fungerede så godt når den blev sat sammen med tekst og var lidt for fin i udtrykket.		</p>
@@ -47,7 +46,14 @@ import "./public/styles/style.css";
 </html>
 
 <style>
-	body {
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: auto;
+}
+
+body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
